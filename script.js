@@ -1,23 +1,24 @@
 let inputEl = document.querySelector(".input");
 let bodyEl = document.querySelector("body");
 
-inputEl.checked = JSON.parse(local storage.getItem('mode'));
+inputEl.checked = JSON.parse(localStorage.getItem('mode'));
 
-updateBody();
+updateBody()
+
 function updateBody(){
   if(inputEl.checked){
     bodyEl.style.backgroundColor= "black"
   }else{
     bodyEl.style.backgroundColor= "white"
-  };
+  }
 };
 
 inputEl.addEventListener("input", ()=>{
-  updateBody();
-  updateLocalStorage();
+  updateBody()
+  updateLocalStorage()
 
 });
 
 function updateLocalStorage(){
-localStorage.setItem('mode',         JSON.stringify(inputEl.checked));
+localStorage.setItem('mode',         JSON.stringify(inputEl.checked))
 };
